@@ -14,7 +14,7 @@ Adafruit_FONA fona = Adafruit_FONA(FONA_RST);
 char PHONE_1[21] = "xxxxxxxxxx"; // Enter your Number here.
 
  
-char theftalertmessage[141]= "You Violated Traffic rules Rs 1000/- debited from your account"  ;
+char alert[141]= "You Violated Traffic rules Rs 1000/- debited from your account"  ;
 
 int pirsensor = 0; 
 
@@ -41,8 +41,8 @@ void loop(){
   if(pirsensor==1)
   {     
      Serial.println("Theft Alert");
-     make_multi_call();
      send_multi_sms();
+     make_multi_call();     
   }
   else  
   { 
@@ -57,7 +57,7 @@ void send_multi_sms()
 {
   if(PHONE_1 != ""){
     Serial.print("Phone 1: ");
-    fona.sendSMS(PHONE_1,theftalertmessage);
+    fona.sendSMS(PHONE_1,alert);
     delay(20000);
   } 
 }
