@@ -40,7 +40,7 @@ void loop(){
   Serial.println(pirsensor);
   if(pirsensor==1)
   {     
-     Serial.println("Theft Alert");
+     Serial.println("Violation Alert");
      send_multi_sms();
      make_multi_call();     
   }
