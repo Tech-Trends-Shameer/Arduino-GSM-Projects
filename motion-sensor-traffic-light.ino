@@ -58,7 +58,7 @@ void send_multi_sms()
   if(PHONE_1 != ""){
     Serial.print("Phone 1: ");
     fona.sendSMS(PHONE_1,alert);
-    delay(20000);
+    delay(5000);
   } 
 }
 void make_multi_call()
@@ -74,7 +74,7 @@ void make_call(String phone)
 {
     Serial.println("calling....");
     fona.println("ATD"+phone+";");
-    delay(20000); //20 sec delay
+    delay(5000); //20 sec delay
     fona.println("ATH");
     delay(1000); //1 sec delay
 }
