@@ -70,7 +70,7 @@ void loop(){
   int pirsensor = digitalRead(5);
   Serial.print("Sensor Value:");
   Serial.println(pirsensor);
-  if(pirsensor==1 & digitalRead(PIN_RED == HIGH))
+  if(pirsensor==1 && digitalRead(PIN_RED == HIGH))
   {     
      Serial.println("Violation Alert");
      send_multi_sms();
