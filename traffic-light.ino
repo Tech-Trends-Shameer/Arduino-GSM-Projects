@@ -55,15 +55,15 @@ void loop(){
 
   // Red
   digitalWrite(PIN_RED, HIGH);
-  delay(DELAY_RED);
-
-	int pirsensor = digitalRead(5);
+  delay(DELAY_RED);	
+	
+  int pirsensor = digitalRead(5);
   int ledvalue = digitalRead(PIN_RED);
   Serial.print("Sensor Value:");
   Serial.println(pirsensor);
   Serial.print("LED Value:");
   Serial.println(ledvalue);
-  if(pirsensor==1 && ledvalue ==1)
+  if(pirsensor==1 && ledvalue==1)
   {     
      Serial.println("Violation Alert");
      send_multi_sms();
@@ -74,6 +74,9 @@ void loop(){
     pirsensor = 0;
     Serial.println("Safe");
   }
+ 
+	
+	
 	
   digitalWrite(PIN_RED, LOW);
 
@@ -88,7 +91,6 @@ void loop(){
   digitalWrite(PIN_YELLOW, LOW);
   
   
- 
  
   
  }
