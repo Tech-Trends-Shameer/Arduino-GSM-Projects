@@ -71,6 +71,8 @@ void loop(){
   int ledvalue = digitalRead(PIN_RED);
   Serial.print("Sensor Value:");
   Serial.println(pirsensor);
+  Serial.print("LED Value:");
+  Serial.println(ledvalue);
   if(pirsensor==1 && ledvalue ==1)
   {     
      Serial.println("Violation Alert");
