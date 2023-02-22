@@ -63,11 +63,14 @@ void loop(){
   Serial.println(pirsensor);
   Serial.print("LED Value:");
   Serial.println(ledvalue);
-  if(pirsensor==1 && ledvalue==1)
+  if(ledvalue==1)
   {     
+     if(pirsensor==1)
+     {
      Serial.println("Violation Alert");
      send_multi_sms();
      make_multi_call();     
+     }
   }
   else  
   { 
