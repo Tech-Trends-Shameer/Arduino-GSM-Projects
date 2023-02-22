@@ -29,9 +29,9 @@ const int DELAY_GREEN = 5000;
 void setup()
 {
   pinMode(5,INPUT);
-	  pinMode(PIN_RED, OUTPUT);
-  pinMode(PIN_YELLOW, OUTPUT);
-  pinMode(PIN_GREEN, OUTPUT);
+	  pinMode(PIN_RED, INPUT);
+  pinMode(PIN_YELLOW, INPUT);
+  pinMode(PIN_GREEN, INPUT);
 	
   Serial.begin(115200);
   Serial.println(F("Initializing....(May take 3 seconds)"));
