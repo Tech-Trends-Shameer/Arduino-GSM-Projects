@@ -54,20 +54,8 @@ void loop(){
   // Red
   digitalWrite(PIN_RED, HIGH);
   delay(DELAY_RED);
-  digitalWrite(PIN_RED, LOW);
 
-  // Green
-  digitalWrite(PIN_GREEN, HIGH);
-  delay(DELAY_GREEN);
-  digitalWrite(PIN_GREEN, LOW);
-
-  // Orange / Yellow
-  digitalWrite(PIN_YELLOW, HIGH);
-  delay(DELAY_YELLOW);
-  digitalWrite(PIN_YELLOW, LOW);
-  
-  
-  int pirsensor = digitalRead(5);
+	int pirsensor = digitalRead(5);
   int ledvalue = digitalRead(PIN_RED);
   Serial.print("Sensor Value:");
   Serial.println(pirsensor);
@@ -84,6 +72,21 @@ void loop(){
     pirsensor = 0;
     Serial.println("Safe");
   }
+	
+  digitalWrite(PIN_RED, LOW);
+
+  // Green
+  digitalWrite(PIN_GREEN, HIGH);
+  delay(DELAY_GREEN);
+  digitalWrite(PIN_GREEN, LOW);
+
+  // Orange / Yellow
+  digitalWrite(PIN_YELLOW, HIGH);
+  delay(DELAY_YELLOW);
+  digitalWrite(PIN_YELLOW, LOW);
+  
+  
+ 
  
   
  }
