@@ -22,13 +22,17 @@ const int PIN_RED = 8;
 const int PIN_YELLOW = 9;
 const int PIN_GREEN = 10;
 
-const int DELAY_RED = 5000;
+const int DELAY_RED = 20000;
 const int DELAY_YELLOW = 1000;
 const int DELAY_GREEN = 5000;
 
 void setup()
 {
   pinMode(5,INPUT);
+	  pinMode(PIN_RED, OUTPUT);
+  pinMode(PIN_YELLOW, OUTPUT);
+  pinMode(PIN_GREEN, OUTPUT);
+	
   Serial.begin(115200);
   Serial.println(F("Initializing....(May take 3 seconds)"));
   delay(5000);
@@ -42,9 +46,7 @@ void setup()
     Serial.println(F("FONA is OK")); 
 	
 	
-  pinMode(PIN_RED, OUTPUT);
-  pinMode(PIN_YELLOW, OUTPUT);
-  pinMode(PIN_GREEN, OUTPUT);
+
 
   allOff();
 }
