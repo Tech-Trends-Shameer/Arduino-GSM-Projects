@@ -14,7 +14,7 @@ Adafruit_FONA fona = Adafruit_FONA(FONA_RST);
 char PHONE_1[21] = "xxxxxxxxxx"; // Enter your Number here.
 
  
-char alert[141]= "You Violated Traffic rules Rs 1000/- debited from your account"  ;
+char alert[141]= "You Violated Traffic rules Rs 1000/- debited from your account";
 
 int pirsensor = 0; 
 
